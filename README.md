@@ -6,6 +6,7 @@ This is developed on python selenium and Robot framework(for reports).
 Python version: Python 3.7.5
 
 ## Note:
+I used Pycharm, you can also add the dependecy through Pycharm-> Preferences ->Project Interpreter-> "+" button
 ## Best to have a virtualenv to run this project
 '''
  python3 -m venv /path/to/new/virtual/environment
