@@ -16,7 +16,8 @@ Go to directory
 
 
 And run below command,
-robot --outputdir "Logs/${date}"  --variable  BROWSER:chrome  --variable URL:https://lambda.grofers.com/ TestSuites/a.robot
+
+#robot --outputdir "Logs/${date}"  --variable  BROWSER:chrome  --variable URL:https://lambda.grofers.com/ TestSuites/a.robot
 
 In the above command BROWSER can be one of the below,
 chrome
