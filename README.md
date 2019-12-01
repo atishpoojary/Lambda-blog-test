@@ -12,10 +12,8 @@ Python version: Python 3.7.5
 '''
 
 ## You can install this framework through the command line,
-'''
- pip install robotframework
- pip install selenium
-'''
+'pip install robotframework'
+'pip install selenium'
 
 <b>To know more about robotframework :</b>
 - [robotframework](http://robotframework.org)
