@@ -1,0 +1,1570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.5 on darwin)" generated="20191201 14:30:34.615" rpa="false">
+<suite id="s1" name="Test Links" source="/Users/apoojary/last/Lambda-blog-test/TestSuites/test_links.robot">
+<test id="s1-t1" name="Test Title link">
+<kw name="Click Header" library="Blog">
+<msg timestamp="20191201 14:30:54.730" level="INFO">Clicking on the header of the page</msg>
+<status status="PASS" starttime="20191201 14:30:44.094" endtime="20191201 14:30:54.857"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:30:56.399" level="INFO" html="yes">&lt;a href="screenshot-1.png"&gt;&lt;img src="screenshot-1.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:30:56.399" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-1.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-1.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:30:54.858" endtime="20191201 14:30:56.399"></status>
+</kw>
+<kw name="Get Header Txt" library="Blog">
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:30:56.421" level="INFO">The Header Text is : Learn all about engineering at Grofers</msg>
+<msg timestamp="20191201 14:30:56.421" level="INFO">${val} = Learn all about engineering at Grofers</msg>
+<status status="PASS" starttime="20191201 14:30:56.399" endtime="20191201 14:30:56.421"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>Learn all about engineering at Grofers</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:30:56.422" endtime="20191201 14:30:56.422"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:30:44.093" endtime="20191201 14:30:56.422" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Test link headers">
+<kw name="${key} IN [ @{list} ]" type="for">
+<kw name="${key} = Architecture" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:08.364" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:30:56.424" endtime="20191201 14:31:08.436"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:11.438" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:08.437" endtime="20191201 14:31:11.438"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:11.443" level="INFO">${val} = Architecture – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:11.438" endtime="20191201 14:31:11.443"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:11.444" endtime="20191201 14:31:11.444"></status>
+</kw>
+<msg timestamp="20191201 14:31:11.444" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:11.443" endtime="20191201 14:31:11.444"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:11.444" endtime="20191201 14:31:11.445"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:11.445" endtime="20191201 14:31:11.509"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:30:56.423" endtime="20191201 14:31:11.509"></status>
+</kw>
+<kw name="${key} = Infrastructure" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:11.510" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:31:11.509" endtime="20191201 14:31:11.565"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:14.567" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:11.566" endtime="20191201 14:31:14.567"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:14.572" level="INFO">${val} = Infrastructure – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:14.567" endtime="20191201 14:31:14.572"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:14.573" endtime="20191201 14:31:14.573"></status>
+</kw>
+<msg timestamp="20191201 14:31:14.573" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:14.572" endtime="20191201 14:31:14.573"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:14.573" endtime="20191201 14:31:14.574"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:14.574" endtime="20191201 14:31:14.637"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:11.509" endtime="20191201 14:31:14.637"></status>
+</kw>
+<kw name="${key} = Data" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:14.638" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:31:14.638" endtime="20191201 14:31:14.701"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:17.702" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:14.701" endtime="20191201 14:31:17.702"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:17.708" level="INFO">${val} = Data – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:17.702" endtime="20191201 14:31:17.708"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:17.708" endtime="20191201 14:31:17.768"></status>
+</kw>
+<msg timestamp="20191201 14:31:17.768" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:17.708" endtime="20191201 14:31:17.768"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:17.768" endtime="20191201 14:31:17.769"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:17.769" endtime="20191201 14:31:17.824"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:14.637" endtime="20191201 14:31:17.824"></status>
+</kw>
+<kw name="${key} = Design" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:17.824" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:31:17.824" endtime="20191201 14:31:17.878"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:20.881" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:17.878" endtime="20191201 14:31:20.881"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:20.887" level="INFO">${val} = Design – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:20.881" endtime="20191201 14:31:20.887"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:20.887" endtime="20191201 14:31:20.888"></status>
+</kw>
+<msg timestamp="20191201 14:31:20.888" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:20.887" endtime="20191201 14:31:20.888"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:20.888" endtime="20191201 14:31:20.888"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:20.888" endtime="20191201 14:31:20.940"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:17.824" endtime="20191201 14:31:20.940"></status>
+</kw>
+<kw name="${key} = Product" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:20.941" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:31:20.940" endtime="20191201 14:31:20.998"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:23.999" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:20.998" endtime="20191201 14:31:24.000"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:24.005" level="INFO">${val} = Product Management – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:24.000" endtime="20191201 14:31:24.006"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:24.006" endtime="20191201 14:31:24.007"></status>
+</kw>
+<msg timestamp="20191201 14:31:24.007" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:24.006" endtime="20191201 14:31:24.007"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:24.007" endtime="20191201 14:31:24.008"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:24.008" endtime="20191201 14:31:24.060"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:20.940" endtime="20191201 14:31:24.060"></status>
+</kw>
+<kw name="${key} = Culture" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:24.061" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:31:24.061" endtime="20191201 14:31:24.111"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:27.113" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:24.111" endtime="20191201 14:31:27.113"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:27.119" level="INFO">${val} = Culture – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:27.114" endtime="20191201 14:31:27.119"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:27.120" endtime="20191201 14:31:27.120"></status>
+</kw>
+<msg timestamp="20191201 14:31:27.120" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:27.120" endtime="20191201 14:31:27.120"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:27.121" endtime="20191201 14:31:27.121"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:27.121" endtime="20191201 14:31:27.176"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:24.061" endtime="20191201 14:31:27.176"></status>
+</kw>
+<kw name="${key} = Internship" type="foritem">
+<kw name="Click Header Links" library="Blog">
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<msg timestamp="20191201 14:31:27.177" level="INFO">Clicking on the header links of the page</msg>
+<status status="PASS" starttime="20191201 14:31:27.176" endtime="20191201 14:31:27.229"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191201 14:31:30.229" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:27.229" endtime="20191201 14:31:30.230"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:30.234" level="INFO">${val} = Internships – Lambda</msg>
+<status status="PASS" starttime="20191201 14:31:30.230" endtime="20191201 14:31:30.234"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:30.235" endtime="20191201 14:31:30.235"></status>
+</kw>
+<msg timestamp="20191201 14:31:30.235" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:30.235" endtime="20191201 14:31:30.235"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:30.235" endtime="20191201 14:31:30.235"></status>
+</kw>
+<kw name="Browser Go Back" library="Blog">
+<doc>Browser action to go back to the Last Page
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:30.236" endtime="20191201 14:31:30.294"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:27.176" endtime="20191201 14:31:30.294"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:30:56.423" endtime="20191201 14:31:30.294"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:30:56.423" endtime="20191201 14:31:30.295" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Test Github Link">
+<kw name="Click Github" library="Blog">
+<msg timestamp="20191201 14:31:40.491" level="INFO">Clicking on the GitHub link on the page</msg>
+<status status="PASS" starttime="20191201 14:31:30.296" endtime="20191201 14:31:40.566"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191201 14:31:43.568" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:40.567" endtime="20191201 14:31:43.568"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:31:45.145" level="INFO" html="yes">&lt;a href="screenshot-1.png"&gt;&lt;img src="screenshot-1.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:31:45.145" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-1.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-1.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:31:43.569" endtime="20191201 14:31:45.145"></status>
+</kw>
+<kw name="Switch To Tab" library="Blog">
+<doc>Switch to the Latest opened window in the browser Instance
+:return:</doc>
+<status status="PASS" starttime="20191201 14:31:45.145" endtime="20191201 14:31:45.154"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191201 14:31:48.155" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:45.154" endtime="20191201 14:31:48.156"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:31:48.658" level="INFO" html="yes">&lt;a href="screenshot-2.png"&gt;&lt;img src="screenshot-2.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:31:48.659" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-2.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-2.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:31:48.156" endtime="20191201 14:31:48.659"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:31:48.664" level="INFO">${val} = Grofers · GitHub</msg>
+<status status="PASS" starttime="20191201 14:31:48.659" endtime="20191201 14:31:48.664"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${github}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${github}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:48.665" endtime="20191201 14:31:48.665"></status>
+</kw>
+<msg timestamp="20191201 14:31:48.665" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:31:48.664" endtime="20191201 14:31:48.665"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:31:48.666" endtime="20191201 14:31:48.666"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:30.295" endtime="20191201 14:31:48.666" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Test Twitter Link">
+<kw name="Click Twitter" library="Blog">
+<msg timestamp="20191201 14:31:58.709" level="INFO">Clicking on the Twitter link on the page</msg>
+<status status="PASS" starttime="20191201 14:31:48.667" endtime="20191201 14:31:58.804"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191201 14:32:01.806" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:31:58.804" endtime="20191201 14:32:01.806"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:03.413" level="INFO" html="yes">&lt;a href="screenshot-1.png"&gt;&lt;img src="screenshot-1.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:03.413" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-1.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-1.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:01.806" endtime="20191201 14:32:03.413"></status>
+</kw>
+<kw name="Switch To Tab" library="Blog">
+<doc>Switch to the Latest opened window in the browser Instance
+:return:</doc>
+<status status="PASS" starttime="20191201 14:32:03.414" endtime="20191201 14:32:03.487"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191201 14:32:06.489" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:32:03.487" endtime="20191201 14:32:06.490"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:07.651" level="INFO" html="yes">&lt;a href="screenshot-2.png"&gt;&lt;img src="screenshot-2.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:07.652" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-2.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-2.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:06.490" endtime="20191201 14:32:07.652"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:32:07.657" level="INFO">${val} = Grofers Engineering (@groferseng) | Twitter</msg>
+<status status="PASS" starttime="20191201 14:32:07.652" endtime="20191201 14:32:07.658"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should be equal as strings</arg>
+<arg>${val}</arg>
+<arg>${twitter}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${twitter}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:07.659" endtime="20191201 14:32:07.659"></status>
+</kw>
+<msg timestamp="20191201 14:32:07.659" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:07.658" endtime="20191201 14:32:07.659"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:07.659" endtime="20191201 14:32:07.659"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:31:48.667" endtime="20191201 14:32:07.660" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Test Lambda Search Tab">
+<kw name="Input Search Tab" library="Blog">
+<arguments>
+<arg>${search_info}</arg>
+</arguments>
+<msg timestamp="20191201 14:32:18.825" level="INFO">Inputting Architecture into the search Tab</msg>
+<msg timestamp="20191201 14:32:18.951" level="INFO">Clicking Enter</msg>
+<status status="PASS" starttime="20191201 14:32:07.660" endtime="20191201 14:32:18.975"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191201 14:32:20.976" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20191201 14:32:18.976" endtime="20191201 14:32:20.977"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:21.454" level="INFO" html="yes">&lt;a href="screenshot-1.png"&gt;&lt;img src="screenshot-1.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:21.454" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-1.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-1.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:20.977" endtime="20191201 14:32:21.454"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20191201 14:32:21.459" level="INFO">${val} = Architecture – Lambda</msg>
+<status status="PASS" starttime="20191201 14:32:21.454" endtime="20191201 14:32:21.459"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${val}</arg>
+<arg>${search_info}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${val}</arg>
+<arg>${search_info}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:21.459" endtime="20191201 14:32:21.460"></status>
+</kw>
+<msg timestamp="20191201 14:32:21.460" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:21.459" endtime="20191201 14:32:21.460"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191201 14:32:24.462" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20191201 14:32:21.460" endtime="20191201 14:32:24.462"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:24.462" endtime="20191201 14:32:24.463"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:07.660" endtime="20191201 14:32:24.463" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Test all links">
+<kw name="Find All Links On Page" library="Blog">
+<assign>
+<var>${list_href}</var>
+</assign>
+<msg timestamp="20191201 14:32:34.111" level="INFO">Getting all the Href links &amp; the Text aligned for the Blogs</msg>
+<msg timestamp="20191201 14:32:34.560" level="INFO">${list_href} = {'https://lambda.grofers.com/devops-for-self-determination-28f37cc7dc82?source=collection_home---4------0-----------------------': 'How DevOps Is Making', 'https://lambda.grofers.com/how-grofers-doubl...</msg>
+<status status="PASS" starttime="20191201 14:32:24.464" endtime="20191201 14:32:34.560"></status>
+</kw>
+<kw name="${key} IN [ @{list_href} ]" type="for">
+<kw name="${key} = https://lambda.grofers.com/devops-for-self-determination-28f37cc7dc82?source=collection_home---4------0-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:34.561" endtime="20191201 14:32:37.662"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:38.325" level="INFO" html="yes">&lt;a href="screenshot-1.png"&gt;&lt;img src="screenshot-1.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:38.326" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-1.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-1.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:37.662" endtime="20191201 14:32:38.326"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:32:38.330" level="INFO">${title} = How DevOps Is Making Managers Redundant And Why That’s a Good Thing</msg>
+<status status="PASS" starttime="20191201 14:32:38.326" endtime="20191201 14:32:38.330"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:32:38.331" level="INFO">How DevOps Is Making</msg>
+<status status="PASS" starttime="20191201 14:32:38.331" endtime="20191201 14:32:38.331"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:38.332" endtime="20191201 14:32:38.332"></status>
+</kw>
+<msg timestamp="20191201 14:32:38.332" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:38.331" endtime="20191201 14:32:38.332"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:38.332" endtime="20191201 14:32:38.332"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:34.561" endtime="20191201 14:32:38.332"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/how-grofers-doubled-the-vip-pass-purchase-conversion-for-indias-biggest-grocery-sale-75a81509aada?source=collection_home---4------1-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:38.333" endtime="20191201 14:32:41.533"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:42.291" level="INFO" html="yes">&lt;a href="screenshot-2.png"&gt;&lt;img src="screenshot-2.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:42.291" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-2.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-2.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:41.535" endtime="20191201 14:32:42.291"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:32:42.295" level="INFO">${title} = How Grofers Doubled The VIP Pass Purchase Conversion For India’s Biggest Grocery Sale</msg>
+<status status="PASS" starttime="20191201 14:32:42.291" endtime="20191201 14:32:42.295"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:32:42.295" level="INFO">How Grofers Doubled </msg>
+<status status="PASS" starttime="20191201 14:32:42.295" endtime="20191201 14:32:42.296"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:42.296" endtime="20191201 14:32:42.296"></status>
+</kw>
+<msg timestamp="20191201 14:32:42.296" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:42.296" endtime="20191201 14:32:42.296"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:42.296" endtime="20191201 14:32:42.297"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:38.332" endtime="20191201 14:32:42.297"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/how-my-grofers-internship-came-to-be-4d8334221b9a?source=collection_home---4------2-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:42.297" endtime="20191201 14:32:45.362"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:45.905" level="INFO" html="yes">&lt;a href="screenshot-3.png"&gt;&lt;img src="screenshot-3.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:45.905" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-3.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-3.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:45.362" endtime="20191201 14:32:45.905"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:32:45.909" level="INFO">${title} = How My Grofers Internship Came To Be - Lambda</msg>
+<status status="PASS" starttime="20191201 14:32:45.905" endtime="20191201 14:32:45.909"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:32:45.910" level="INFO">How My Grofers Inter</msg>
+<status status="PASS" starttime="20191201 14:32:45.909" endtime="20191201 14:32:45.910"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:45.910" endtime="20191201 14:32:45.911"></status>
+</kw>
+<msg timestamp="20191201 14:32:45.911" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:45.910" endtime="20191201 14:32:45.911"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:45.911" endtime="20191201 14:32:45.911"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:42.297" endtime="20191201 14:32:45.911"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/how-i-started-working-with-kubernetes-1c60f2eb1886?source=collection_home---4------3-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:45.911" endtime="20191201 14:32:52.608"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:53.161" level="INFO" html="yes">&lt;a href="screenshot-4.png"&gt;&lt;img src="screenshot-4.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:53.162" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-4.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-4.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:52.609" endtime="20191201 14:32:53.162"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:32:53.165" level="INFO">${title} = How I Started Working With Kubernetes - Lambda</msg>
+<status status="PASS" starttime="20191201 14:32:53.162" endtime="20191201 14:32:53.165"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:32:53.166" level="INFO">How I Started Workin</msg>
+<status status="PASS" starttime="20191201 14:32:53.166" endtime="20191201 14:32:53.166"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:53.166" endtime="20191201 14:32:53.167"></status>
+</kw>
+<msg timestamp="20191201 14:32:53.167" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:53.166" endtime="20191201 14:32:53.167"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:53.167" endtime="20191201 14:32:53.167"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:45.911" endtime="20191201 14:32:53.167"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/how-we-sustain-dns-outages-at-grofers-800731e5280c?source=collection_home---4------4-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:53.168" endtime="20191201 14:32:57.330"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:32:57.738" level="INFO" html="yes">&lt;a href="screenshot-5.png"&gt;&lt;img src="screenshot-5.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:32:57.739" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-5.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-5.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:32:57.330" endtime="20191201 14:32:57.739"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:32:57.743" level="INFO">${title} = How We Sustain DNS Outages at Grofers - Lambda</msg>
+<status status="PASS" starttime="20191201 14:32:57.739" endtime="20191201 14:32:57.743"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:32:57.744" level="INFO">How We Sustain DNS O</msg>
+<status status="PASS" starttime="20191201 14:32:57.743" endtime="20191201 14:32:57.744"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:57.744" endtime="20191201 14:32:57.744"></status>
+</kw>
+<msg timestamp="20191201 14:32:57.744" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:32:57.744" endtime="20191201 14:32:57.744"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:57.745" endtime="20191201 14:32:57.745"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:53.167" endtime="20191201 14:32:57.745"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/a-comprehensive-guide-to-deploying-a-website-in-kubernetes-c5829bfa4519?source=collection_home---4------5-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:32:57.745" endtime="20191201 14:33:01.838"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:02.311" level="INFO" html="yes">&lt;a href="screenshot-6.png"&gt;&lt;img src="screenshot-6.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:02.311" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-6.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-6.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:01.839" endtime="20191201 14:33:02.311"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:02.315" level="INFO">${title} = A Comprehensive Guide To Deploying A Website In Kubernetes</msg>
+<status status="PASS" starttime="20191201 14:33:02.312" endtime="20191201 14:33:02.315"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:02.316" level="INFO">A Comprehensive Guid</msg>
+<status status="PASS" starttime="20191201 14:33:02.316" endtime="20191201 14:33:02.316"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:02.316" endtime="20191201 14:33:02.317"></status>
+</kw>
+<msg timestamp="20191201 14:33:02.317" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:02.316" endtime="20191201 14:33:02.317"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:02.317" endtime="20191201 14:33:02.317"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:57.745" endtime="20191201 14:33:02.317"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/software-engineering-internship-at-grofers-bddd2dd1523e?source=collection_home---4------6-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:02.317" endtime="20191201 14:33:05.285"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:05.720" level="INFO" html="yes">&lt;a href="screenshot-7.png"&gt;&lt;img src="screenshot-7.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:05.720" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-7.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-7.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:05.285" endtime="20191201 14:33:05.720"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:05.725" level="INFO">${title} = Software Engineering Internship at Grofers - Lambda</msg>
+<status status="PASS" starttime="20191201 14:33:05.720" endtime="20191201 14:33:05.725"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:05.725" level="INFO">Software Engineering</msg>
+<status status="PASS" starttime="20191201 14:33:05.725" endtime="20191201 14:33:05.725"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:05.726" endtime="20191201 14:33:05.726"></status>
+</kw>
+<msg timestamp="20191201 14:33:05.726" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:05.725" endtime="20191201 14:33:05.726"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:05.726" endtime="20191201 14:33:05.727"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:02.317" endtime="20191201 14:33:05.727"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/credentials-leaked-in-public-heres-what-grofers-implemented-to-prevent-such-mishaps-66a40b5743af?source=collection_home---4------0-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:05.727" endtime="20191201 14:33:08.355"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:08.811" level="INFO" html="yes">&lt;a href="screenshot-8.png"&gt;&lt;img src="screenshot-8.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:08.811" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-8.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-8.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:08.356" endtime="20191201 14:33:08.811"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:08.815" level="INFO">${title} = Credentials leaked in public? Here’s what Grofers implemented to prevent such mishaps!</msg>
+<status status="PASS" starttime="20191201 14:33:08.811" endtime="20191201 14:33:08.815"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:08.816" level="INFO">Credentials leaked i</msg>
+<status status="PASS" starttime="20191201 14:33:08.816" endtime="20191201 14:33:08.816"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:08.816" endtime="20191201 14:33:08.817"></status>
+</kw>
+<msg timestamp="20191201 14:33:08.817" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:08.816" endtime="20191201 14:33:08.817"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:08.817" endtime="20191201 14:33:08.817"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:05.727" endtime="20191201 14:33:08.817"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/why-physical-storage-of-your-database-tables-might-matter-74b563d664d9?source=collection_home---4------1-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:08.817" endtime="20191201 14:33:11.041"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:11.489" level="INFO" html="yes">&lt;a href="screenshot-9.png"&gt;&lt;img src="screenshot-9.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:11.489" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-9.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-9.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:11.041" endtime="20191201 14:33:11.490"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:11.494" level="INFO">${title} = Why physical storage of your database tables might matter</msg>
+<status status="PASS" starttime="20191201 14:33:11.490" endtime="20191201 14:33:11.494"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:11.495" level="INFO">Why physical storage</msg>
+<status status="PASS" starttime="20191201 14:33:11.494" endtime="20191201 14:33:11.495"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:11.495" endtime="20191201 14:33:11.495"></status>
+</kw>
+<msg timestamp="20191201 14:33:11.495" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:11.495" endtime="20191201 14:33:11.495"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:11.495" endtime="20191201 14:33:11.496"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:08.817" endtime="20191201 14:33:11.496"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/a-day-in-release-engineering-at-grofers-36aa22b1f5e1?source=collection_home---4------2-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:11.496" endtime="20191201 14:33:13.226"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:13.649" level="INFO" html="yes">&lt;a href="screenshot-10.png"&gt;&lt;img src="screenshot-10.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:13.649" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-10.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-10.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:13.226" endtime="20191201 14:33:13.649"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:13.654" level="INFO">${title} = A Day in Release Engineering at Grofers - Lambda</msg>
+<status status="PASS" starttime="20191201 14:33:13.649" endtime="20191201 14:33:13.654"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:13.654" level="INFO">A Day in Release Eng</msg>
+<status status="PASS" starttime="20191201 14:33:13.654" endtime="20191201 14:33:13.654"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:13.654" endtime="20191201 14:33:13.655"></status>
+</kw>
+<msg timestamp="20191201 14:33:13.655" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:13.654" endtime="20191201 14:33:13.655"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:13.655" endtime="20191201 14:33:13.655"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:11.496" endtime="20191201 14:33:13.655"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/its-a-million-small-things-that-matter-77fd9362c05b?source=collection_home---4------3-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:13.656" endtime="20191201 14:33:16.918"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:17.380" level="INFO" html="yes">&lt;a href="screenshot-11.png"&gt;&lt;img src="screenshot-11.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:17.380" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-11.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-11.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:16.918" endtime="20191201 14:33:17.380"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:17.384" level="INFO">${title} = It’s a million small things that matter - Lambda</msg>
+<status status="PASS" starttime="20191201 14:33:17.380" endtime="20191201 14:33:17.384"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:17.385" level="INFO">It’s a million small</msg>
+<status status="PASS" starttime="20191201 14:33:17.385" endtime="20191201 14:33:17.385"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:17.385" endtime="20191201 14:33:17.386"></status>
+</kw>
+<msg timestamp="20191201 14:33:17.386" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:17.385" endtime="20191201 14:33:17.386"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:17.386" endtime="20191201 14:33:17.386"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:13.656" endtime="20191201 14:33:17.386"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/how-we-load-tested-our-apis-in-production-18225ee77f45?source=collection_home---4------4-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:17.386" endtime="20191201 14:33:20.737"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:21.622" level="INFO" html="yes">&lt;a href="screenshot-12.png"&gt;&lt;img src="screenshot-12.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:21.623" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-12.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-12.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:20.738" endtime="20191201 14:33:21.623"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:21.627" level="INFO">${title} = How we load tested our APIs in Production - Lambda</msg>
+<status status="PASS" starttime="20191201 14:33:21.623" endtime="20191201 14:33:21.627"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:21.628" level="INFO">How we load tested o</msg>
+<status status="PASS" starttime="20191201 14:33:21.627" endtime="20191201 14:33:21.628"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:21.628" endtime="20191201 14:33:21.629"></status>
+</kw>
+<msg timestamp="20191201 14:33:21.629" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:21.628" endtime="20191201 14:33:21.629"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:21.629" endtime="20191201 14:33:21.629"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:17.386" endtime="20191201 14:33:21.629"></status>
+</kw>
+<kw name="${key} = https://lambda.grofers.com/exploratory-data-analysis-of-orders-at-grofers-63ccc571719e?source=collection_home---4------5-----------------------" type="foritem">
+<kw name="Go To Url" library="Blog">
+<doc>browse the URL
+:param url: URL to be browsed
+:return:</doc>
+<arguments>
+<arg>${key}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:21.629" endtime="20191201 14:33:23.945"></status>
+</kw>
+<kw name="Capture Screenshot" library="Blog">
+<doc>Taking screenshots and attaching the screenshot to the
+Robot Report
+:return:</doc>
+<msg timestamp="20191201 14:33:24.391" level="INFO" html="yes">&lt;a href="screenshot-13.png"&gt;&lt;img src="screenshot-13.png" width="100"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20191201 14:33:24.391" level="INFO" html="yes">Screenshot saved to '&lt;a href="screenshot-13.png"&gt;/Users/apoojary/last/Lambda-blog-test/Logs/screenshot-13.png&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20191201 14:33:23.945" endtime="20191201 14:33:24.391"></status>
+</kw>
+<kw name="Get Tilte Of Page" library="Blog">
+<doc>Get The Title of the page
+:return:</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20191201 14:33:24.396" level="INFO">${title} = Exploratory Data Analysis of orders on Grofers - Lambda</msg>
+<status status="PASS" starttime="20191201 14:33:24.391" endtime="20191201 14:33:24.396"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<msg timestamp="20191201 14:33:24.397" level="INFO">Exploratory Data Ana</msg>
+<status status="PASS" starttime="20191201 14:33:24.396" endtime="20191201 14:33:24.397"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>should contain</arg>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<assign>
+<var>${contains}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>${list_href["${key}"]}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:24.411" endtime="20191201 14:33:24.412"></status>
+</kw>
+<msg timestamp="20191201 14:33:24.412" level="INFO">${contains} = True</msg>
+<status status="PASS" starttime="20191201 14:33:24.397" endtime="20191201 14:33:24.412"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${contains}</arg>
+</arguments>
+<status status="PASS" starttime="20191201 14:33:24.413" endtime="20191201 14:33:24.413"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:33:21.629" endtime="20191201 14:33:24.413"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:34.560" endtime="20191201 14:33:24.413"></status>
+</kw>
+<status status="PASS" starttime="20191201 14:32:24.463" endtime="20191201 14:33:24.413" critical="yes"></status>
+</test>
+<doc>My first mpulse tests</doc>
+<status status="PASS" starttime="20191201 14:30:34.617" endtime="20191201 14:33:24.416"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="Test Links">Test Links</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
