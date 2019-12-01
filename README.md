@@ -5,8 +5,7 @@ It will automate the web application project, specifically for Lambda Web projec
 This is developed on python selenium and Robot framework(for reports).
 Python version: Python 3.7.5
 
-Note:
-
+## Note:
 ## Best to have a virtualenv to run this project
 '''
  python3 -m venv /path/to/new/virtual/environment
