@@ -13,8 +13,10 @@ I used Pycharm, you can also add the dependecy through Pycharm-> Preferences ->P
 '''
 
 ## You can install this framework through the command line,
-'pip install robotframework'
-'pip install selenium'
+'''pip install robotframework'''
+'''pip install selenium'''
+'''pip install setuptools'''
+
 
 <b>To know more about robotframework :</b>
 - [robotframework](http://robotframework.org)
@@ -23,6 +25,9 @@ I used Pycharm, you can also add the dependecy through Pycharm-> Preferences ->P
 Go to directory
 '''
 cd Lambda-blog-test
+'''
+'''
+python setup.py install
 '''
 
 ## And run below command,
